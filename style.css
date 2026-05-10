@@ -1,0 +1,94 @@
+:root {
+    --primary: #2d3436;
+    --accent: #27ae60;
+    --accent-light: #f0fff4;
+    --bg-light: #f9fbf9;
+    --text-main: #1a2a3a;
+    --text-secondary: #4a5a6a;
+    --white: #ffffff;
+    --glass: rgba(255, 255, 255, 0.85);
+    --shadow: 0 10px 40px rgba(0,0,0,0.08);
+    --font-heading: 'Noto Serif TC', serif;
+    --font-body: 'Inter', sans-serif;
+    --font-calligraphy: 'Ma Shan Zheng', cursive;
+    --color-wood: #2ecc71; --color-fire: #e74c3c; --color-earth: #e67e22; --color-metal: #f1c40f; --color-water: #3498db;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 19px; }
+body { background-color: var(--bg-light); color: var(--text-main); font-family: var(--font-body); line-height: 1.8; overflow-x: hidden; }
+
+.container { max-width: 1400px; margin: 0 auto; padding: 0 3rem; }
+.center-layout { display: flex; flex-direction: column; align-items: center; }
+
+/* Navbar */
+.navbar { position: absolute; top: 0; width: 100%; padding: 2.5rem 4rem; display: flex; justify-content: space-between; align-items: center; z-index: 1000; }
+.logo { font-family: var(--font-calligraphy); font-size: 2.8rem; color: var(--primary); }
+.nav-links a { text-decoration: none; color: var(--text-main); margin-left: 2.5rem; font-weight: 600; font-size: 1.1rem; }
+
+/* Hero */
+.hero { height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+.hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; z-index: -2; animation: zoomHero 20s infinite alternate; }
+@keyframes zoomHero { from { transform: scale(1); } to { transform: scale(1.1); } }
+.hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, rgba(255,255,255,0.2), rgba(255,255,255,0.95)); z-index: -1; }
+.hero-content { text-align: center; }
+.hero-content h1 { font-family: var(--font-heading); font-size: 5.5rem; margin-bottom: 1rem; }
+
+/* Solar System */
+.solar-system-perspective { width: 600px; height: 600px; background: #000; border-radius: 50%; overflow: hidden; margin: 3rem 0; box-shadow: 0 40px 100px rgba(0,0,0,0.5); }
+
+/* Evolution Tabs */
+.evolution-tabs { display: flex; gap: 1rem; margin-bottom: 3rem; }
+.step-btn { padding: 1rem 2.5rem; border: 1px solid #ddd; background: #fff; border-radius: 50px; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: 0.3s; }
+.step-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); box-shadow: 0 10px 20px rgba(39, 174, 96, 0.2); }
+
+.evolution-display-centered { width: 100%; display: flex; flex-direction: column; align-items: center; gap: 3rem; background: #fff; padding: 5rem; border-radius: 40px; box-shadow: var(--shadow); }
+.visual-container-centered { min-height: 300px; display: flex; justify-content: center; align-items: center; width: 100%; }
+.text-container-centered { text-align: center; max-width: 800px; }
+
+/* Stems & Branches Stacked */
+.stems-branches-stacked { width: 100%; max-width: 1200px; }
+.detail-column { background: #fff; padding: 4rem; border-radius: 30px; box-shadow: var(--shadow); width: 100%; }
+.grid-stems { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+.grid-branches { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.detail-item { display: flex; align-items: center; gap: 1.5rem; padding: 1.2rem; border: 1px solid #f0f0f0; border-radius: 20px; }
+.item-key { font-size: 2.5rem; font-family: var(--font-calligraphy); width: 60px; text-align: center; flex-shrink: 0; }
+.item-val h4 { font-size: 1.3rem; margin-bottom: 0.2rem; }
+
+/* Color Classes */
+.wood .item-key, .wood h4 { color: var(--color-wood); }
+.fire .item-key, .fire h4 { color: var(--color-fire); }
+.earth .item-key, .earth h4 { color: var(--color-earth); }
+.metal .item-key, .metal h4 { color: var(--color-metal); }
+.water .item-key, .water h4 { color: var(--color-water); }
+
+/* Relationship Diagrams */
+.relationship-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; width: 100%; }
+.rel-card { background: #fff; padding: 3rem; border-radius: 30px; box-shadow: var(--shadow); display: flex; flex-direction: column; align-items: center; }
+.diagram-container { width: 100%; height: 500px; display: flex; justify-content: center; align-items: center; }
+
+/* Ten Gods List */
+.tengod-grid-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; width: 100%; }
+.tengod-card { background: #fff; padding: 2.5rem; border-radius: 24px; box-shadow: var(--shadow); border: 1px solid #f0f0f0; transition: transform 0.3s; }
+.tengod-card:hover { transform: translateY(-5px); border-color: var(--accent); }
+.tg-title { font-size: 1.5rem; font-family: var(--font-heading); color: var(--accent); margin-bottom: 1rem; border-bottom: 2px solid var(--accent-light); display: inline-block; }
+.tg-desc { font-size: 1.1rem; color: var(--text-secondary); line-height: 1.6; }
+
+/* Nine Palace Grid */
+.nine-palace-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; width: 500px; }
+.palace-box { background: #f9fbf9; aspect-ratio: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 1px solid #eee; border-radius: 15px; }
+
+/* 64 Hexagrams */
+.hex-64-container { display: grid; grid-template-columns: repeat(8, 1fr); gap: 5px; width: 100%; }
+.hex-box { background: #fdfdfd; border: 1px solid #eee; aspect-ratio: 1; display: flex; align-items: center; justify-content: center; }
+
+/* Section Header */
+.section-header.center { text-align: center; margin-bottom: 4rem; }
+.section-tag { color: var(--accent); letter-spacing: 4px; font-weight: 800; font-size: 0.9rem; margin-bottom: 1rem; display: block; }
+
+.section { padding: 150px 0; opacity: 0; transform: translateY(50px); transition: 1.2s; }
+.section.visible { opacity: 1; transform: translateY(0); }
+
+@media (max-width: 1024px) {
+    .relationship-grid, .grid-stems, .grid-branches, .tengod-grid-list { grid-template-columns: 1fr; }
+}

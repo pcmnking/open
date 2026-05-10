@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大自然的智慧 - 命理與天體運行</title>
+    <meta name="description" content="探索大自然的智慧，理解星辰運行與生命的關聯。從五行生剋到天干地支，洞察宇宙律動。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Ma+Shan+Zheng&family=Noto+Serif+TC:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <nav class="navbar">
+        <div class="logo">大自然的智慧</div>
+        <div class="nav-links">
+            <a href="#origin">星辰律動</a>
+            <a href="#evolution">易經演化</a>
+            <a href="#stems-branches">天干地支</a>
+            <a href="#elements">五行十神</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-bg" style="background-image: url('hero.png');"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="reveal-text">大自然的智慧</h1>
+            <p class="subtitle reveal-text">觀察星辰運行，體悟天地規律</p>
+            <div class="scroll-indicator">
+                <span>展開探索</span>
+                <div class="mouse"></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Section 1: Solar System -->
+        <section id="origin" class="section origin-section">
+            <div class="container center-layout">
+                <div class="section-header center">
+                    <span class="section-tag">宇宙記錄</span>
+                    <h2>天人感應：星辰的印記</h2>
+                    <p class="description larger">在你出生的一瞬間，太陽系行星的位置與能量狀態，記錄了生命初始的頻率。</p>
+                </div>
+                <div class="solar-system-perspective">
+                    <div id="solarVisual" class="solar-content"></div>
+                </div>
+                <div class="planet-legend-grid">
+                    <div class="planet-desc"><strong>木星：</strong>仁慈、成長能量。</div>
+                    <div class="planet-desc"><strong>火星：</strong>活力、行動源泉。</div>
+                    <div class="planet-desc"><strong>土星：</strong>責任、收斂力量。</div>
+                    <div class="planet-desc"><strong>金星：</strong>和諧、美感平衡。</div>
+                    <div class="planet-desc"><strong>水星：</strong>智慧、溝通特質。</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Evolution -->
+        <section id="evolution" class="section evolution-section">
+            <div class="container center-layout">
+                <div class="section-header center">
+                    <span class="section-tag">易經演化</span>
+                    <h2>演化過程</h2>
+                </div>
+
+                <div class="evolution-horizontal">
+                    <div class="evolution-tabs">
+                        <button class="step-btn active" data-step="1">太極</button>
+                        <button class="step-btn" data-step="2">兩儀</button>
+                        <button class="step-btn" data-step="3">四象</button>
+                        <button class="step-btn" data-step="4">八卦</button>
+                        <button class="step-btn" data-step="5">六十四卦</button>
+                    </div>
+
+                    <div class="evolution-display-centered">
+                        <div id="evolutionVisual" class="visual-container-centered"></div>
+                        <div id="evolutionText" class="text-container-centered">
+                            <h3>太極</h3>
+                            <p class="larger">萬物之始，渾然一體。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Stems & Branches -->
+        <section id="stems-branches" class="section stems-section">
+            <div class="container center-layout">
+                <div class="section-header center">
+                    <span class="section-tag">符號體系</span>
+                    <h2>天干與地支的象義</h2>
+                </div>
+                
+                <div class="stems-branches-stacked">
+                    <div class="detail-column">
+                        <h3>十天干 (Stems)</h3>
+                        <div id="stemsList" class="detail-list grid-stems"></div>
+                    </div>
+                    <div class="detail-column" style="margin-top: 4rem;">
+                        <h3>十二地支 (Branches)</h3>
+                        <div id="branchesList" class="detail-list grid-branches"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Relationships & Ten Gods -->
+        <section id="elements" class="section elements-section">
+            <div class="container center-layout">
+                <div class="section-header center">
+                    <span class="section-tag">能量交互</span>
+                    <h2>五行與十神關係圖</h2>
+                </div>
+
+                <div class="relationship-grid">
+                    <div class="rel-card">
+                        <h3>五行生剋</h3>
+                        <div id="wuxingDiagram" class="diagram-container"></div>
+                    </div>
+                    <div class="rel-card">
+                        <h3>十神生剋</h3>
+                        <div id="tengodDiagram" class="diagram-container"></div>
+                    </div>
+                </div>
+
+                <div class="tengod-meanings" style="margin-top: 6rem; width: 100%;">
+                    <div class="section-header center">
+                        <h3>十神的象義說明</h3>
+                        <p class="larger">十神代表了生命中的各種關係、性格與命運維度。</p>
+                    </div>
+                    <div id="tengodList" class="tengod-grid-list">
+                        <!-- Injected by JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">大自然的智慧</div>
+                <div class="copyright">© 2026 命理研究室.</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
