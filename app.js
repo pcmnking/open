@@ -113,23 +113,23 @@ document.addEventListener('DOMContentLoaded', () => {
             const x1 = centerX + (radius-40)*Math.cos(sA), y1 = centerY + (radius-40)*Math.sin(sA), x2 = centerX + (radius-40)*Math.cos(eA), y2 = centerY + (radius-40)*Math.sin(eA);
             svg += `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="#e74c3c" stroke-width="2" stroke-dasharray="8,4" marker-end="url(#arrow-ke-${containerId})" />`;
             const lx = (x1+x2)/2, ly = (y1+y2)/2;
-            svg += `<text x="${lx}" y="${ly}" fill="#e74c3c" font-size="12" font-weight="bold" text-anchor="middle">剋</text>`;
+            svg += `<text x="${lx}" y="${ly}" fill="#e74c3c" font-size="16" font-weight="bold" text-anchor="middle">剋</text>`;
         }
         for (let i = 0; i < 5; i++) {
             const sA = (i * 72 - 80) * (Math.PI / 180), eA = ((i + 1) * 72 - 100) * (Math.PI / 180);
             const x1 = centerX + radius*Math.cos(sA), y1 = centerY + radius*Math.sin(sA), x2 = centerX + radius*Math.cos(eA), y2 = centerY + radius*Math.sin(eA);
             svg += `<path d="M ${x1} ${y1} A ${radius} ${radius} 0 0 1 ${x2} ${y2}" stroke="#27ae60" fill="none" stroke-width="3" marker-end="url(#arrow-sheng-${containerId})" />`;
-            const lA = (i * 72 - 54) * (Math.PI / 180), lx = centerX + (radius+25)*Math.cos(lA), ly = centerY + (radius+25)*Math.sin(lA);
-            svg += `<text x="${lx}" y="${ly}" fill="#27ae60" font-size="12" font-weight="bold" text-anchor="middle">生</text>`;
+            const lA = (i * 72 - 54) * (Math.PI / 180), lx = centerX + (radius+30)*Math.cos(lA), ly = centerY + (radius+30)*Math.sin(lA);
+            svg += `<text x="${lx}" y="${ly}" fill="#27ae60" font-size="16" font-weight="bold" text-anchor="middle">生</text>`;
         }
         nodes.forEach((label, i) => {
             const angle = (i * 72 - 90) * (Math.PI / 180), x = centerX + radius*Math.cos(angle), y = centerY + radius*Math.sin(angle);
-            svg += `<circle cx="${x}" cy="${y}" r="45" fill="${colors[i]}" stroke="#fff" stroke-width="2" />`;
+            svg += `<circle cx="${x}" cy="${y}" r="48" fill="${colors[i]}" stroke="#fff" stroke-width="2" />`;
             const parts = label.split('、');
             if (parts.length > 1) {
-                svg += `<text x="${x}" y="${y-5}" text-anchor="middle" fill="white" font-size="14" font-weight="bold">${parts[0]}</text>`;
-                svg += `<text x="${x}" y="${y+15}" text-anchor="middle" fill="white" font-size="14" font-weight="bold">${parts[1]}</text>`;
-            } else svg += `<text x="${x}" y="${y+8}" text-anchor="middle" fill="white" font-size="18" font-weight="bold">${label}</text>`;
+                svg += `<text x="${x}" y="${y-8}" text-anchor="middle" fill="white" font-size="16" font-weight="bold">${parts[0]}</text>`;
+                svg += `<text x="${x}" y="${y+18}" text-anchor="middle" fill="white" font-size="16" font-weight="bold">${parts[1]}</text>`;
+            } else svg += `<text x="${x}" y="${y+10}" text-anchor="middle" fill="white" font-size="22" font-weight="bold">${label}</text>`;
         });
         svg += `</svg>`;
         container.innerHTML = svg;
