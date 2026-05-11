@@ -44,7 +44,18 @@ body { background-color: var(--bg-light); color: var(--text-main); font-family: 
 .hero-content h1 { font-family: var(--font-heading); font-size: 5.5rem; margin-bottom: 1rem; }
 
 /* Solar System */
-.solar-system-perspective { width: 600px; height: 600px; background: #000; border-radius: 50%; overflow: hidden; margin: 3rem 0; box-shadow: 0 40px 100px rgba(0,0,0,0.5); }
+.solar-system-perspective { width: 600px; height: 600px; background: #000; border-radius: 50%; overflow: hidden; margin: 3rem 0; box-shadow: 0 40px 100px rgba(0,0,0,0.5); position: relative; }
+.solar-content { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
+
+.planet-orbit {
+    transform-origin: 300px 300px;
+    animation: rotateOrbit linear infinite;
+}
+
+@keyframes rotateOrbit {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
 
 /* Evolution Tabs */
 .evolution-tabs { display: flex; gap: 1rem; margin-bottom: 3rem; overflow-x: auto; padding-bottom: 1rem; -webkit-overflow-scrolling: touch; width: 100%; justify-content: center; }

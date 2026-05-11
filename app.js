@@ -24,17 +24,18 @@ document.addEventListener('DOMContentLoaded', () => {
             <svg width="100%" height="100%" viewBox="0 0 600 600" preserveAspectRatio="xMidYMid meet">
                 <defs><radialGradient id="sunGradient"><stop offset="0%" stop-color="#fff7e6" /><stop offset="100%" stop-color="#ffa500" /></radialGradient></defs>
                 <rect width="600" height="600" fill="#000" />
-                <circle cx="300" cy="300" r="30" fill="url(#sunGradient)" />
-                <circle cx="300" cy="300" r="60" fill="none" stroke="rgba(255,255,255,0.2)" />
-                <circle cx="300" cy="300" r="100" fill="none" stroke="rgba(255,255,255,0.2)" />
-                <circle cx="300" cy="300" r="150" fill="none" stroke="rgba(255,255,255,0.2)" />
-                <circle cx="300" cy="300" r="210" fill="none" stroke="rgba(255,255,255,0.2)" />
-                <circle cx="300" cy="300" r="270" fill="none" stroke="rgba(255,255,255,0.2)" />
-                <g><circle cx="360" cy="300" r="5" fill="#979797"><animateTransform attributeName="transform" type="rotate" from="0 300 300" to="360 300 300" dur="4s" repeatCount="indefinite" /></circle><text x="365" y="295" fill="#fff" font-size="12">水</text></g>
-                <g><circle cx="400" cy="300" r="8" fill="#e3bb76"><animateTransform attributeName="transform" type="rotate" from="0 300 300" to="360 300 300" dur="7s" repeatCount="indefinite" /></circle><text x="408" y="295" fill="#fff" font-size="12">金</text></g>
-                <g><circle cx="450" cy="300" r="7" fill="#e27b58"><animateTransform attributeName="transform" type="rotate" from="0 300 300" to="360 300 300" dur="12s" repeatCount="indefinite" /></circle><text x="458" y="295" fill="#fff" font-size="12">火</text></g>
-                <g><circle cx="510" cy="300" r="15" fill="#d39c7e"><animateTransform attributeName="transform" type="rotate" from="0 300 300" to="360 300 300" dur="25s" repeatCount="indefinite" /></circle><text x="525" y="295" fill="#fff" font-size="12">木</text></g>
-                <g><circle cx="570" cy="300" r="13" fill="#c5ab6e"><animateTransform attributeName="transform" type="rotate" from="0 300 300" to="360 300 300" dur="45s" repeatCount="indefinite" /></circle><text x="585" y="295" fill="#fff" font-size="12">土</text></g>
+                <circle cx="300" cy="300" r="40" fill="url(#sunGradient)" />
+                <circle cx="300" cy="300" r="60" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+                <circle cx="300" cy="300" r="100" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+                <circle cx="300" cy="300" r="150" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+                <circle cx="300" cy="300" r="210" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+                <circle cx="300" cy="300" r="270" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+                
+                <g class="planet-orbit" style="animation-duration: 4s;"><circle cx="360" cy="300" r="8" fill="#979797" /><text x="372" y="305" fill="#fff" font-size="14">水</text></g>
+                <g class="planet-orbit" style="animation-duration: 7s;"><circle cx="400" cy="300" r="12" fill="#e3bb76" /><text x="415" y="305" fill="#fff" font-size="14">金</text></g>
+                <g class="planet-orbit" style="animation-duration: 12s;"><circle cx="450" cy="300" r="11" fill="#e27b58" /><text x="465" y="305" fill="#fff" font-size="14">火</text></g>
+                <g class="planet-orbit" style="animation-duration: 25s;"><circle cx="510" cy="300" r="20" fill="#d39c7e" /><text x="535" y="305" fill="#fff" font-size="14">木</text></g>
+                <g class="planet-orbit" style="animation-duration: 45s;"><circle cx="570" cy="300" r="18" fill="#c5ab6e" /><text x="592" y="305" fill="#fff" font-size="14">土</text></g>
             </svg>
         `;
     }
