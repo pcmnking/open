@@ -24,18 +24,18 @@ document.addEventListener('DOMContentLoaded', () => {
             <svg width="100%" height="100%" viewBox="0 0 600 600" preserveAspectRatio="xMidYMid meet">
                 <defs><radialGradient id="sunGradient"><stop offset="0%" stop-color="#fff7e6" /><stop offset="100%" stop-color="#ffa500" /></radialGradient></defs>
                 <rect width="600" height="600" fill="#000" />
-                <circle cx="300" cy="300" r="40" fill="url(#sunGradient)" />
-                <circle cx="300" cy="300" r="60" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
-                <circle cx="300" cy="300" r="100" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
-                <circle cx="300" cy="300" r="150" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
-                <circle cx="300" cy="300" r="210" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
-                <circle cx="300" cy="300" r="270" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+                <circle cx="300" cy="300" r="50" fill="url(#sunGradient)" />
+                <circle cx="300" cy="300" r="75" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" />
+                <circle cx="300" cy="300" r="115" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" />
+                <circle cx="300" cy="300" r="165" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" />
+                <circle cx="300" cy="300" r="225" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" />
+                <circle cx="300" cy="300" r="280" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" />
                 
-                <g class="planet-orbit" style="animation-duration: 4s;"><circle cx="360" cy="300" r="8" fill="#979797" /><text x="372" y="305" fill="#fff" font-size="14">水</text></g>
-                <g class="planet-orbit" style="animation-duration: 7s;"><circle cx="400" cy="300" r="12" fill="#e3bb76" /><text x="415" y="305" fill="#fff" font-size="14">金</text></g>
-                <g class="planet-orbit" style="animation-duration: 12s;"><circle cx="450" cy="300" r="11" fill="#e27b58" /><text x="465" y="305" fill="#fff" font-size="14">火</text></g>
-                <g class="planet-orbit" style="animation-duration: 25s;"><circle cx="510" cy="300" r="20" fill="#d39c7e" /><text x="535" y="305" fill="#fff" font-size="14">木</text></g>
-                <g class="planet-orbit" style="animation-duration: 45s;"><circle cx="570" cy="300" r="18" fill="#c5ab6e" /><text x="592" y="305" fill="#fff" font-size="14">土</text></g>
+                <g class="planet-orbit" style="animation-duration: 4s;"><circle cx="375" cy="300" r="12" fill="#979797" /><text x="390" y="305" fill="#fff" font-size="16" font-weight="bold">水</text></g>
+                <g class="planet-orbit" style="animation-duration: 7s;"><circle cx="415" cy="300" r="18" fill="#e3bb76" /><text x="435" y="305" fill="#fff" font-size="16" font-weight="bold">金</text></g>
+                <g class="planet-orbit" style="animation-duration: 12s;"><circle cx="465" cy="300" r="15" fill="#e27b58" /><text x="485" y="305" fill="#fff" font-size="16" font-weight="bold">火</text></g>
+                <g class="planet-orbit" style="animation-duration: 25s;"><circle cx="525" cy="300" r="28" fill="#d39c7e" /><text x="555" y="305" fill="#fff" font-size="16" font-weight="bold">木</text></g>
+                <g class="planet-orbit" style="animation-duration: 45s;"><circle cx="580" cy="300" r="24" fill="#c5ab6e" /><text x="605" y="305" fill="#fff" font-size="16" font-weight="bold">土</text></g>
             </svg>
         `;
     }

@@ -49,6 +49,7 @@ body { background-color: var(--bg-light); color: var(--text-main); font-family: 
 
 .planet-orbit {
     transform-origin: 300px 300px;
+    transform-box: view-box;
     animation: rotateOrbit linear infinite;
 }
 
