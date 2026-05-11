@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const solarVisual = document.getElementById('solarVisual');
     if (solarVisual) {
         solarVisual.innerHTML = `
-            <svg width="600" height="600" viewBox="0 0 600 600">
+            <svg width="100%" height="100%" viewBox="0 0 600 600" preserveAspectRatio="xMidYMid meet">
                 <defs><radialGradient id="sunGradient"><stop offset="0%" stop-color="#fff7e6" /><stop offset="100%" stop-color="#ffa500" /></radialGradient></defs>
                 <rect width="600" height="600" fill="#000" />
                 <circle cx="300" cy="300" r="30" fill="url(#sunGradient)" />
@@ -53,10 +53,10 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     const evolutionData = {
-        1: { title: "太極 (Taiji)", desc: "萬物之始，陰陽平衡。", content: `<svg width="250" height="250" viewBox="0 0 200 200"><circle cx="100" cy="100" r="95" fill="white" stroke="#eee" /><path d="M100 5 A 47.5 47.5 0 0 1 100 100 A 47.5 47.5 0 0 0 100 195 A 95 95 0 0 0 100 5" fill="black" /><circle cx="100" cy="52.5" r="15" fill="white" /><circle cx="100" cy="147.5" r="15" fill="black" /><circle cx="100" cy="52.5" r="5" fill="black" /><circle cx="100" cy="147.5" r="5" fill="white" /></svg>` },
-        2: { title: "兩儀 (Liangyi)", desc: "分陰陽，定動靜。", content: `<div style="font-size: 150px; color: #27ae60;">⚊ ⚋</div>` },
-        3: { title: "四象 (Sixiang)", desc: "太陽、少陰、少陽、太陰。", content: `<div style="font-size: 80px; color: #27ae60; display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px;"><div>⚌<br><small style="font-size:18px">太陽</small></div><div>⚍<br><small style="font-size:18px">少陰</small></div><div>⚎<br><small style="font-size:20px">少陽</small></div><div>⚏<br><small style="font-size:18px">太陰</small></div></div>` },
-        4: { title: "八卦九宮", desc: "方位與萬物的基本對應。", content: `<div class="nine-palace-grid">${ninePalaceData.map((item, i) => `<div class="palace-box ${i===4?'center-box':''}"> <span style="font-size:3rem; color:#27ae60">${item.symbol}</span> <span style="font-size:1.1rem; font-weight:bold">${item.name}</span> </div>`).join('')}</div>` },
+        1: { title: "太極 (Taiji)", desc: "萬物之始，陰陽平衡。", content: `<svg width="100%" height="250" viewBox="0 0 200 200" preserveAspectRatio="xMidYMid meet"><circle cx="100" cy="100" r="95" fill="white" stroke="#eee" /><path d="M100 5 A 47.5 47.5 0 0 1 100 100 A 47.5 47.5 0 0 0 100 195 A 95 95 0 0 0 100 5" fill="black" /><circle cx="100" cy="52.5" r="15" fill="white" /><circle cx="100" cy="147.5" r="15" fill="black" /><circle cx="100" cy="52.5" r="5" fill="black" /><circle cx="100" cy="147.5" r="5" fill="white" /></svg>` },
+        2: { title: "兩儀 (Liangyi)", desc: "分陰陽，定動靜。", content: `<div style="font-size: clamp(80px, 20vw, 150px); color: #27ae60;">⚊ ⚋</div>` },
+        3: { title: "四象 (Sixiang)", desc: "太陽、少陰、少陽、太陰。", content: `<div style="font-size: clamp(40px, 10vw, 80px); color: #27ae60; display: grid; grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); gap: 20px; width: 100%; max-width: 600px;"><div>⚌<br><small style="font-size:16px">太陽</small></div><div>⚍<br><small style="font-size:16px">少陰</small></div><div>⚎<br><small style="font-size:16px">少陽</small></div><div>⚏<br><small style="font-size:16px">太陰</small></div></div>` },
+        4: { title: "八卦九宮", desc: "方位與萬物的基本對應。", content: `<div class="nine-palace-grid">${ninePalaceData.map((item, i) => `<div class="palace-box ${i===4?'center-box':''}"> <span style="font-size: clamp(1.5rem, 5vw, 3rem); color:#27ae60">${item.symbol}</span> <span style="font-size: clamp(0.8rem, 3vw, 1.1rem); font-weight:bold">${item.name}</span> </div>`).join('')}</div>` },
         5: { title: "六十四卦", desc: "演化之終，窮盡變化。", content: `<div class="hex-64-container">${Array.from({length: 64}, (_, i) => `<div class="hex-box"><span class="hex-symbol">${String.fromCodePoint(0x4DC0 + i)}</span></div>`).join('')}</div>` }
     };
 
@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!container) return;
         const width = 450, height = 450, centerX = 225, centerY = 225, radius = 150;
 
-        let svg = `<svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">
+        let svg = `<svg width="100%" height="100%" viewBox="0 0 ${width} ${height}" preserveAspectRatio="xMidYMid meet">
             <defs>
                 <marker id="arrow-sheng-${containerId}" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#27ae60" /></marker>
                 <marker id="arrow-ke-${containerId}" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#e74c3c" /></marker>
